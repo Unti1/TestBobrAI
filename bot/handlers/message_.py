@@ -14,4 +14,4 @@ async def get_city(message: types.Message):
                     f"Описание: {weather['description'].capitalize()}")
         await message.reply(response, parse_mode=ParseMode.HTML)
     else:
-        await message.reply("Не удалось получить данные о погоде. Проверьте название города.")
+        await message.reply("Упс... Мне не удалось получить данные о погоде. Проверьте правильность названия города.")
