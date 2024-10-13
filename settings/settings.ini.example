@@ -1,0 +1,13 @@
+[Telegram]
+api = 
+
+[database]
+url = sqlite+aiosqlite:///./data/main.db
+
+[redis]
+host = localhost
+port = 6379
+db = 0
+
+[OpenWeather]
+token = 
