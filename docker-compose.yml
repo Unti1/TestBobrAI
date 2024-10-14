@@ -6,4 +6,15 @@ services:
     container_name: telegram_weather_bot
     volumes:
       - .:/app
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+    restart: always
+
+  redis:
+    image: redis:6.0-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
     restart: always
